@@ -1,6 +1,7 @@
 
 import java.io.*;
 import java.nio.file.*;
+import java.util.concurrent.TimeUnit;
 import java.nio.charset.StandardCharsets;
 
 public class MyFileWriter {
@@ -45,6 +46,168 @@ public class MyFileWriter {
             Files.write(Paths.get(fileName5), data.getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("echo", "Hello Luca");
+            processBuilder.inheritIO();  // Redirect output to console
+            
+            Process process = processBuilder.start();
+            
+            boolean completed = process.waitFor(10, TimeUnit.SECONDS);
+            int exitCode = process.exitValue();
+            process.destroyForcibly();
+        }
+        catch (Exception e) {
+
         }
     }
 }
